@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Medical Store</title>
+
+    <link rel="stylesheet" href="StyleSheet/medicalStore.css">
+
+</head>
+
+<body>
+
+    <div id="homePage">
+        <h2>Home</h2>
+        <button type="button" onclick="newUserPage()">New User</button>
+        <button type="button" onclick="existingUserPage()">Existing User</button>
+
+
+    </div>
+
+    <div id="newUserPage">
+
+        <h3>Sign Up Page</h3>
+        <label> User Name : </label><br><input type="text" id="newUserName" onkeyup="checkNewUserName('newUserName')">
+        <label
+            id="newUserNameMessage"></label><br>
+        <label> User Age : </label><br><input type="number" id="newUserAge" onkeyup="checkNewUserAge('newUserAge')">
+        <label
+            id="newUserAgeMessage"></label><br>
+        <label> User Phone Number : </label><br><input type="number" id="newUserPhoneNumber"
+            onkeyup="checkNewUserPhoneNumber('newUserPhoneNumber')"><label id="newUserPhoneNumberMessage">
+                
+            </label><br>
+
+        <button onclick="signUp()">Sign Up</button>
+    </div>
+
+    <div id="existingUserPage">
+
+        <h3>Sign In Page</h3>
+        <label>User ID</label>
+        <input type="text" id="existingUserId">
+        <button type="button" onclick="signIn()">Sign In</button><br>
+        <label id="availableUser"></label>
+
+    </div>
+
+    <div id="medicinePage">
+
+        <h2>Medicine Page</h2>
+
+        <label id="greet"></label><button onclick="displayHomePage()">Go Home</button><br>
+
+        <button onclick="showHistory()">Show History</button><br>
+
+        <label id="historyDisplay"></label>
+        <br>
+        <h3>Want to Buy a Medicine?</h3>
+        <select name="medicineList" id="medicineList" onchange="medicineListCheck()">
+
+            <option value="Paracetomol">Paracetomol</option>
+            <option value="Colpal">Colpal</option>
+            <option value="Stepsil">Stepsil</option>
+            <option value="Iodex">Iodex</option>
+            <option value="Acetherol">Acetherol</option>
+        </select>
+
+        <button onclick="medicineListCheck()">Check</button><br>
+        <br>
+        <label id="medicineInfo"></label>
+
+        <br><br>
+        <div id="requiredCount">
+            <label>Required Count </label><input type="number" id="medicineRequiredCount"><button
+                onclick="buyMedicine()">Buy</button>
+
+        </div>
+
+    </div>
+</body>
+
+<script type="text/JavaScript" src="TypeScript/medicalStore.js"></script>
+
+</html>

@@ -1,0 +1,49 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+}
+
+body{
+    margin: 50px;
+}
+
+#homePage
+{
+    display: block;
+}
+
+#newUserPage{
+    display: none;
+}
+
+#existingUserPage{
+    display: none;
+}
+
+#medicinePage{
+    display: none;
+}
+
+#requiredCount
+{
+    display: none;
+}
+
+#historyDisplay{
+    display: none;
+}
+
+button{
+    width: 150px;
+    height: 30px;
+    margin-left: 10px;
+    border:  0px solid white;
+    background-color: tomato;
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+input{
+    margin-bottom: 20px;
+}
