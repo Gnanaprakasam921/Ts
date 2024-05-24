@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="form">
+            <button class="contact" onclick="addContact()">Add Contact</button> 
+            <button class="export" onclick="exportToCSV()">Export CSV</button>
+            <br>
+            <br>
+
+            First Name :
+            <input type="text" id="name" placeholder="First Name" ><br>
+            <br>
+            Email ID :
+            <input type="text" id="email" placeholder="Email-ID" > <br>
+            <br>
+            Phone Number :
+            <input type="tel" id="phone" placeholder="Phone Number" maxlength="10"><br>
+            <br>
+            DOB:
+            <input type="date" id="date"> <br>
+            <br>
+
+            Balance:
+            <input type="balance" id="balance" placeholder="Balance" > <br>
+            <br>
+            Languages known :
+            <br>
+            <select id="multiselect" multiple>
+            <option value="Tamil">Tamil</option>
+            <option value="English">English</option>
+            <option value="Hindi">Hindi</option>
+            </select>
+            <br>
+             Upload your Photo :
+            <br>
+            <input type="file" name="photo" id="fileInput">
+            <br>
+            <br>
+
+            <button type="submit" id="submitBtn">Submit</button>
+            <button type="reset" id="resetBtn">Reset</button>
+    </form>
+    <br>
+    <br>
+
+
+    <div id="table" >
+        <table border="2" id="contactTable">
+            <tr>
+                <td>Id</td>
+               <td>Name</td>
+               <td>Email</td>
+               <td>Phone</td> 
+               <td>DOB</td>
+               <td>Languages</td>
+               <td>Balance</td>
+               <td>Photo</td>
+               <td>Actions</td>
+            </tr>
+            <tbody id="contactTableBody">
+
+            </tbody>
+        </table>
+
+        <script src="./TypeScript/userDetails.js"></script>
+
+</body>
+</html>
